@@ -1,0 +1,46 @@
+<h2>Делаем расширениe для гугл хрома Angular 14</h2>
+<div>
+  <p>Создадим новый ангуляр проект</p>
+  <p class="code-style">ng new home-page</p>
+  <p>Делаем очень важный импорт для chrome api</p>
+  <p class="code-style">npm install --save @types/chrome</p>
+</div>
+
+<div>
+  <p>Добавляем <span>manifest.json</span> по пути <span>"./src/.."</span></p>
+  <img src="./../../assets/images/manifest-v1.jpg">
+</div>
+
+<div>
+  <p>Добавляем <span>background.ts</span> по пути <span>"./src/.."</span></p>
+</div>
+
+<div>
+  <p>Добавляем файлы <span>background.ts</span> и <span>manifest.json</span> в <span>angular.json</span></p>
+  <p>Это нужно для того что бы поле билда проекта эти файлы попали в папку <span>dist</span></p>
+  <img src="./../../assets/images/angularJson-v1.jpg">
+</div>
+
+<div>
+  <p>Отключаем кэш</p>
+  <img src="./../../assets/images/disable-hash-v1.jpg">
+  <p>Без отключения</p>
+  <img src="./../../assets/images/build-with-hash.jpg">
+  <p>После отключения</p>
+  <img src="./../../assets/images/build-without-hash.jpg">
+</div>
+
+<div>
+  <p>Устанавливаем и настраиваем <span>custom-webpack</span> для <span>background.ts</span></p>
+  <p>Это нужно что бы полсе билда код из <span>background.ts</span> перешел в <span>background.js</span>.
+    Затем запустился вместе с отсальными ангуляр файлами</p>
+  <p>Устанавливаем <span>custom-webpack</span></p>
+  <p class="code-style">npm install --save @angular-builders/custom-webpack</p>
+  <p>Создаем файл <span>custom-webpack.config.ts</span> в <span>./app/..</span></p>
+  <img src="./../../assets/images/custom-webpack.jpg">
+  <p>Обновляем <span>angular.json</span></p>
+  <img src="./../../assets/images/add-custom-webpack.jpg">
+  <p>Убираем ошибку со стилями</p>
+  <img src="./../../assets/images/remove-error.jpg">
+</div>
+
